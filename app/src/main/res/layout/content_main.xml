@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hp.scarnedice.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your score: 0 Computer score: 0"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:id="@+id/overAllTotal"/>
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:onClick="onReset"
+        android:layout_alignBaseline="@+id/holdButton"
+        android:layout_alignBottom="@+id/holdButton"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <Button
+        android:text="Hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/holdButton"
+        android:onClick="onHold"
+        android:layout_alignBaseline="@+id/rollButton"
+        android:layout_alignBottom="@+id/rollButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rollButton"
+        android:onClick="onRoll"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dice1"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/turnTotal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
+
+    <TextView
+        android:text="TURN SCORE: 0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/turnTotal"
+        android:textSize="30dp"
+        android:padding="16dp"
+        android:layout_below="@+id/overAllTotal"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="PLAYER TURN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userTurn"
+        android:textSize="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
